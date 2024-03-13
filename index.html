@@ -8,28 +8,31 @@
 </head>
 
 <body>
-
-    <section class="input">
-        <img src="./iconos/logo.svg" alt="" class="logo">
-        <textarea name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-        <div>
-            <span class="input-info"><img src="./iconos/icono.svg" alt=""> Solo letras minúsculas y sin acentos</span>
-            <button class="btn encriptar">Encriptar</button>
-            <button class="btn desencriptar">Desencriptar</button>
-        </div>
-    </section>
-
-    <section class="output">
-        <div class="results">
-            <img src="./iconos/imagen.svg" alt="" id="results-image">
-            <div class="results-texts">
-                <h1>Ningun Mensaje fue encontrado</h1>
-                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+    <main>
+        <section id="input">
+            <img src="./iconos/logo.svg" alt="" class="logo">
+            <textarea name="" id="input-area" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="botonera">
+                <span class="input-info"><img src="./iconos/icono.svg" alt=""> Solo letras minúsculas y sin
+                    acentos</span>
+                <button id="btn-encriptar" class="btn encriptar disabled" onclick="encriptar();">Encriptar</button>
+                <button id="btn-desencriptar" class="btn desencriptar" onclick="desencriptar();">Desencriptar</button>
             </div>
-        </div>
-        <!-- <button class="btn copiar">Desencriptar</button> -->
-    </section>
+        </section>
+        <section id="output">
+            <div id="info-desencriptar">
+                <img src="./iconos/imagen.svg" alt="" id="results-image">
+                <div class="results-texts">
+                    <h1>Ningun Mensaje fue encontrado</h1>
+                    <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+            <textarea cols="10" disabled="" id="output-area" placeholder="Ingresa el texto a encriptar"></textarea>
+            <button id="btn-copiar" class="btn hidden" onclick="copiar();">Copiar</button>
+        </section>
+    </main>
 
+    <script src="./js/index.js"></script>
 
 </body>
 
